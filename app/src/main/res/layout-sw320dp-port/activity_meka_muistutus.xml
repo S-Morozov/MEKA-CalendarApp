@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Author: Semen Morozov and Kaspar Tullus-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pill"
+    tools:context=".Muistutus.MekaMuistutus">
+
+
+    <EditText
+        android:id="@+id/editTextMedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/tallennimi"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#795548"
+        app:layout_constraintEnd_toEndOf="@+id/btn_time"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/btn_time"
+        app:layout_constraintTop_toBottomOf="@+id/btn_time" />
+
+    <Button
+        android:id="@+id/btn_addToCalendar"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="btn_addToCalendar"
+        android:text="@string/tallenna1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMedicine"
+        app:layout_constraintStart_toStartOf="@+id/editTextMedicine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMedicine"
+        app:layout_constraintVertical_bias="0.097" />
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/teal_700"
+        android:hint="@string/time"
+        android:text="@string/ValitseAika"
+        android:textColor="#FAFAFA"
+        app:layout_constraintEnd_toEndOf="@+id/btn_date"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/btn_date" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="371dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:gravity="center"
+        android:text="Add time, date and name of the pill"
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/custom_buttons"
+        android:backgroundTint="@color/teal_700"
+        android:hint="@string/date"
+        android:text="@string/Päivämäärä"
+        android:textColor="#FAFAFA"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

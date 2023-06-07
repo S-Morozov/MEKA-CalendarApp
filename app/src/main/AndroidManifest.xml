@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"></uses-permission>
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeKa"
+        tools:targetApi="31">
+
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".MainActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".Muistutus.Calendar_memory_list"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".PaivaKirja.Paivakirja_view_delete"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".PaivaKirja.PaivaKirjaData_Displayer"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".PaivaKirja.paivaKirja_kirjaaminen"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity android:name=".Muistutus.MekaMuistutus"
+                android:theme="@style/AppTheme"/>
+
+        <activity android:name=".Muistutus.CalendarActivity_View"
+                    android:theme="@style/AppTheme"/>
+
+        <receiver android:name=".Muistutus.AlertReceiver"/>
+
+    </application>
+
+</manifest>
